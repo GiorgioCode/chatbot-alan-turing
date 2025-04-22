@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat con Alan Turing - IA Emulador de Personalidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {}
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-gray-900 text-white dark">
+  
+    <div id="login-container" class="container mx-auto px-4 py-8 max-w-md flex flex-col items-center justify-center min-h-screen">
+      <form id="login-form" class="bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-700 flex flex-col gap-4 w-full max-w-sm">
+        <h2 class="text-2xl font-bold mb-4 text-center">Iniciar sesión</h2>
+        <input type="text" id="login-username" class="px-4 py-2 rounded bg-gray-700 border border-gray-600 text-white" placeholder="prueba" autocomplete="username" required />
+        <input type="password" id="login-password" class="px-4 py-2 rounded bg-gray-700 border border-gray-600 text-white" placeholder="pruebaturing" autocomplete="current-password" required />
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded transition-colors">Entrar</button>
+        <div id="login-error" class="text-red-500 text-center hidden">Usuario o contraseña incorrectos.</div>
+      </form>
+      <footer class="mt-8 text-center text-xs text-gray-500 dark:text-gray-400">
+        <a href="https://jorgepaez.vercel.app/" target="_blank" rel="noopener" class="underline hover:text-blue-400">desarrollado por Jorge Angel Paez</a>
+      </footer>
+    </div>
+    <div id="app" class="container mx-auto px-4 py-8 max-w-4xl hidden">
+      <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold mb-2">Chat con Alan Turing</h1>
+        <p class="text-gray-600 dark:text-gray-400">Conversa con una IA que emula la personalidad de Alan Turing, matemático, informático, criptógrafo y pionero de la computación.</p>
+      </header>
+      
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
+        <div id="chat-messages" class="flex flex-col space-y-4 h-[450px] overflow-y-auto mb-6 p-2">
+          <!-- Los mensajes se añadirán aquí dinámicamente con avatares -->
+        </div>
+        
+        <div id="typing-indicator" class="message-container bot-message hidden mb-4">
+          <div class="avatar">
+            <img src="/alan-avatar.jpg" alt="Alan Turing" />
+          </div>
+          <div class="message-content flex items-center">
+            <div class="typing-dot"></div>
+            <div class="typing-dot animation-delay-200"></div>
+            <div class="typing-dot animation-delay-400"></div>
+          </div>
+        </div>
+        
+        <div class="flex items-center">
+          <input 
+            type="text" 
+            id="user-input" 
+            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" 
+            placeholder="Escribe tu mensaje aquí..." 
+            aria-label="Escribe tu mensaje"
+          />
+          <button 
+            id="send-button" 
+            class="px-5 py-3 bg-blue-600 text-white rounded-lg ml-3 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium transition-colors duration-200" 
+            aria-label="Enviar mensaje"
+          >
+            <span>Enviar</span>
+          </button>
+        </div>
+      </div>
+      
+      <footer class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+        <p>Este chatbot emula la personalidad de Alan Turing y utiliza tecnología de IA para responder como él podría haberlo hecho.</p>
+        <div class="mt-2 text-xs">
+          <a href="https://jorgepaez.vercel.app/" target="_blank" rel="noopener" class="underline hover:text-blue-400">desarrollado por Jorge Angel Paez</a>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

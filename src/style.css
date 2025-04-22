@@ -1,0 +1,111 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #111827; /* Fondo oscuro */
+  color: #e5e7eb; /* Texto claro */
+}
+
+/* Estilos para avatares y mensajes */
+.message-container {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+  flex-shrink: 0;
+  border: 2px solid #4b5563;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-content {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: calc(100% - 60px);
+  word-break: break-word;
+}
+
+.user-message .message-content {
+  background-color: #1e40af; /* Azul oscuro */
+  color: #e5e7eb;
+  border-radius: 1.5rem 1.5rem 0 1.5rem;
+  margin-left: auto;
+}
+
+.bot-message .message-content {
+  background-color: #1f2937; /* Gris oscuro */
+  color: #e5e7eb;
+  border-radius: 1.5rem 1.5rem 1.5rem 0;
+}
+
+/* Invertir dirección para mensajes del usuario */
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.user-message .avatar {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+/* Estilos para el área de mensajes */
+#chat-messages {
+  background-color: #1a202c;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #374151;
+}
+
+/* Estilos para el input y botón */
+#user-input {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+}
+
+#send-button {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Animación de dots para typing */
+.typing-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #9ca3af;
+  border-radius: 9999px;
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
