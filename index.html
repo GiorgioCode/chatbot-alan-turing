@@ -18,6 +18,12 @@
   <body class="bg-gray-900 text-white dark">
   
     <div id="login-container" class="container mx-auto px-4 py-8 max-w-md flex flex-col items-center justify-center min-h-screen">
+        <!-- Título principal -->
+        <h1 class="text-3xl font-bold mb-6 text-center">Charla con Alan Turing</h1>
+        <!-- Avatar de Alan Turing -->
+        <div class="mb-6">
+          <img src="/alan-avatar.jpg" alt="Alan Turing" class="w-32 h-32 object-cover rounded-full border-4 border-blue-600 shadow-lg mx-auto" />
+        </div>
       <form id="login-form" class="bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-700 flex flex-col gap-4 w-full max-w-sm">
         <h2 class="text-2xl font-bold mb-4 text-center">Iniciar sesión</h2>
         <input type="text" id="login-username" class="px-4 py-2 rounded bg-gray-700 border border-gray-600 text-white" placeholder="prueba" autocomplete="username" required />
@@ -28,10 +34,14 @@
       <footer class="mt-8 text-center text-xs text-gray-500 dark:text-gray-400">
         <a href="https://jorgepaez.vercel.app/" target="_blank" rel="noopener" class="underline hover:text-blue-400">desarrollado por Jorge Angel Paez</a>
       </footer>
+      <!-- Vínculo al repositorio del proyecto -->
+      <div class="mt-4 text-center text-xs text-gray-400">
+        Para más información visite el repositorio del proyecto:<br>
+        <a href="https://github.com/GiorgioCode/chatbot-alan-turing" target="_blank" rel="noopener" class="underline hover:text-blue-400 break-all">https://github.com/GiorgioCode/chatbot-alan-turing</a>
+      </div>
     </div>
     <div id="app" class="container mx-auto px-4 py-8 max-w-4xl hidden">
       <header class="text-center mb-8">
-        <h1 class="text-3xl font-bold mb-2">Chat con Alan Turing</h1>
         <p class="text-gray-600 dark:text-gray-400">Conversa con una IA que emula la personalidad de Alan Turing, matemático, informático, criptógrafo y pionero de la computación.</p>
       </header>
       
@@ -70,11 +80,15 @@
       </div>
       
       <footer class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-        <p>Este chatbot emula la personalidad de Alan Turing y utiliza tecnología de IA para responder como él podría haberlo hecho.</p>
         <div class="mt-2 text-xs">
           <a href="https://jorgepaez.vercel.app/" target="_blank" rel="noopener" class="underline hover:text-blue-400">desarrollado por Jorge Angel Paez</a>
         </div>
       </footer>
+      <!-- Vínculo al repositorio del proyecto -->
+      <div class="mt-4 text-center text-xs text-gray-400">
+        Para más información visite el repositorio del proyecto:<br>
+        <a href="https://github.com/GiorgioCode/chatbot-alan-turing" target="_blank" rel="noopener" class="underline hover:text-blue-400 break-all">https://github.com/GiorgioCode/chatbot-alan-turing</a>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
